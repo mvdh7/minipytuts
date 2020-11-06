@@ -5,7 +5,7 @@ t_list = [25.1, 12.3, 6.8]
 t = np.array(t_list)
 
 # Import text data
-data = np.genfromtxt('../data/titration2.txt', skip_header=2)
+data = np.genfromtxt("../data/titration2.txt", skip_header=2)
 
 # Pull out individual columns
 vol = data[:, 0]

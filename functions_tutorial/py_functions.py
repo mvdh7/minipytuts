@@ -6,11 +6,12 @@ def add_and_square(a, b, c=5, d=22):
 
 
 x, y = add_and_square(5, 6, d=1)  # only provide values for the kwargs you need
-                                  # in whatever order you need them
+# in whatever order you need them
 
 
 def subtract(a, b):
     return b - a
+
 
 # Splatting
 a = 5
@@ -25,6 +26,7 @@ add, square = add_and_square(*args, **kwargs)
 
 # Functions vs methods
 import numpy as np
+
 data = [1, 2, 3, 4, 5]
 data_mean = np.mean(data)  # function
 data = np.array(data)
@@ -35,6 +37,7 @@ data_mean = data.mean()  # method to do exactly the same as the function
 def times_by_temp(var):
     newvar = 3
     return (temp * var) ** newvar
+
 
 temp = 15
 
@@ -52,6 +55,7 @@ print(times_by_temp(3))
 def say_hello():
     print("Hi there")
     return 5
+
 
 x = say_hello()  # x becomes 5 (the output of say_hello)
 x = say_hello  # x becomes the function say_hello
