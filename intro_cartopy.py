@@ -10,6 +10,8 @@ fig, ax = plt.subplots(dpi=300, subplot_kw=dict(projection=ccrs.Mollweide(centra
 
 # Quick visualisation of the coastlines
 # ax.coastlines()
+
+# More detailed features from naturalearthdata
 ax.add_feature(
     cfeature.NaturalEarthFeature("physical", "land", "10m"),
     facecolor='k',
@@ -26,11 +28,12 @@ ax.add_feature(
 # Scatter the data
 ax.scatter("LONGITUDE", "LATITUDE", data=rws, transform=ccrs.PlateCarree())
 ax.text(0, 1.05, "(a)", transform=ax.transAxes)
+# transform kwarg sets what format the x and y numbers are in, not the projection that
+# they are going to
 
 # Plot settings
 # ax.set_global()
-ax.set_extent((0, 10, 50, 60))
-
+ax.set_extent((0, 10, 50, 60))  # west, east, south, north limits
 ax.gridlines(alpha=0.3)
 
 # https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/
