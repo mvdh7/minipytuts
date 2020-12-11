@@ -48,7 +48,7 @@ ax.plot(ix, iy_interp1d, label="interp1d")
 ax.plot(ix, iy_pchip, label="PCHIP")
 ax.legend()
 ax.set_xlabel("Decimal days since 1970-01-01")
-if yvar == "DIC":
+if yvar == "dic":
     ax.set_ylabel("DIC / micromol kg$^{-1}$")
 elif yvar == "alkalinity":
     ax.set_ylabel("Alkalinity / micromol kg$^{-1}$")
